@@ -16,6 +16,8 @@ class Movie < ApplicationRecord
   validates(:director_id, presence: true)
   validates(:title, uniqueness: true)
 
+  belongs_to(:director)
+=begin
   def director
     key = self.director_id
 
@@ -25,4 +27,6 @@ class Movie < ApplicationRecord
 
     return the_one
   end
+=end
+
 end
